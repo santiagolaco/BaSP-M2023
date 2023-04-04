@@ -7,7 +7,7 @@ dictated by Radium Rocket. It consists of the development of a website to manage
 
 The work of the week consisted of developing the screenflow of the website using Figma, taking into account all the functionalities required by the project. The work modality was adopting an agile methodology, in this case scrum.
 
-### :link: [Screenflow in Figma](https://www.github.com/santiagolaco)
+### :link: [Screenflow in Figma](https://www.figma.com/file/q7xbVOHjKu9ofdssX15Jve/UI-kit-RR---B?node-id=41-4&t=i8FwVDkfHtokmkrZ-0)
 
 ## :date: Week 2
 
