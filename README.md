@@ -1,19 +1,21 @@
+# Become a Sofware Professional 2023
 
-# The Best Gym
-This is an educational project, which is developed thanks to the Bootcamp Become a Software Professional 2023, 
-dictated by Radium Rocket. It consists of the development of a website for the management of a gym.
+This is an educational project, which is developed thanks to the Bootcamp Become a Software Professional 2023,
+dictated by Radium Rocket. It consists of the development of a website to manage the schedules of the gym, schedules of the employees, the activities and memberships.
 
-## Week 1
+## :date: Week 1
 
--Development of the website screenflow using Figma.
+The work of the week consisted of developing the screenflow of the website using Figma, taking into account all the functionalities required by the project. The work modality was adopting an agile methodology, in this case scrum.
 
-## Week 2
+### :link: [Screenflow in Figma](https://www.github.com/santiagolaco)
 
--Create a repository on GitHub where the project will be developed.
+## :date: Week 2
 
--Upload exported images of the Figma landing page layout.
+Work was done on the HTML development of the web page, with the objective of respecting a correct syntax and a correct use of semantic elements. Work was done with the Git versioning tool, uploading the different commits to GitHub.
 
--Landing page development in HTML.
+## :date: Week 3
+
+Modifications were made to the HTML based on comments and suggestions from teachers and based on needs to achieve the style designed in Figma.. In addition, styles are added to the page developed in week 2 in HTML, for this a CSS file was developed.
 
 ## Authors
 
