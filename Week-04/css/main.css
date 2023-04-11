@@ -1,4 +1,8 @@
-
+/* .main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
 aside{
     display: flex;
     justify-content: center;
@@ -73,9 +77,12 @@ aside{
     margin-bottom: 20px;
 }
 .section-title{
-    width: 80%;
-    margin: 14% 0;
-    padding: 3% 13%;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    min-height: 53px;
+    width: 82%;
     text-align: center;
     color: #FFFFFF;
     background-color: #373867;
@@ -84,14 +91,22 @@ aside{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 5%;
 }
-.all-activities div {
+.activities-group {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5%;
+}
+.activities-group div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width:270px;
+    width:70%;
     height: 270px;
     margin-bottom: 20px;
 }
@@ -106,7 +121,7 @@ aside{
 .all-activities p {
     width: 100%;
     color: #FFFFFF;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     line-height:20px;
     text-align: center  ;
@@ -140,6 +155,243 @@ aside{
     background-position: center top;
     background-size: cover;
 }
+.memberships {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.memberships-all{
+    margin-top: 10%;
+}
+.membership-each-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.only-classes{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+}
+.rect-gris{
+    background-color:#979797;
+    height: 45px;
+    width: 80%;
+    margin-top: -55px;
+
+}
+
+.only-classes h2 {
+    margin: 10% 0;
+    align-self: flex-start;
+    color: #373867;
+    font-size: 30.5px;
+    font-weight: 700;
+}
+.only-classes span {
+    color: #AACE9B;
+}
+.only-classes p,li{
+    color: #373867;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5%;
+    text-align: left;
+}
+.text-membership{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.only-classes ul{
+    align-self: flex-start;
+    border-bottom: 1px solid #AFAFC2;
+    padding-bottom: 5%;
+    width: 100%;
+}
+.list-membership li::before{
+    content: "\2713";
+    padding-right: 5px;
+}
+.memberships img {
+    width: 100%;
+    height:100%;
+}
+.button{
+    width: 100%;
+    background-color: #49A37B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    margin-top: 5% ;
+}
+
+.button a{
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+.banner > div{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.banner-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin-top: 10%;
+}
+.banner-images{
+  width: 128px;
+  height: 128px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.banner-h2-wh{
+  font-size: 52px;
+  font-weight: 700;
+}
+.banner-h3-wh{
+  margin-top: 5%;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.banner-p-wh{
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  text-align: justify;
+}
+.banner-h2-bl{
+  font-size: 65px;
+  font-weight: 700;
+  color: #373867;
+}
+.banner-h3-bl{
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 33px;
+  color: #373867;
+}
+.banner-p-bl{
+  font-weight: 400;
+  font-size: 33px;
+  color: #373867;
+  text-align: justify;
+}
+.reservation-banner{
+  display: flex;
+  background-color: #AACE9B;
+}
+.membership-banner{
+  display: none;
+  background-color: #373867;
+}
+.schedule-banner{
+  display: none;
+  background-color: white;
+}
+.contact-banner{
+  display: none;
+  background-color: #919194;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  width: 90%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  outline: 1px solid black;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.form-title{
+  text-align: center;
+  color: #373867;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+}
+.radio-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#373867 ;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  margin-top: 4%;
+  padding-right: 3px;
+  padding-bottom: 2px;
+  font-weight: 500;
+}
+form label{
+  font-size: 8px;
+}
+.name-surname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+
+}
+.input-name{
+  width: 40%;
+}
+.input-surname{
+  width: 40%;
+}
+.message-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 4%;
+}
+.message-input label{
+  color: #373867;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 4%;
+}
+.message-input input{
+  align-self: center;
+  width: 30%;
+  height: 35px;
+  background: #AACE9B;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  color: #373867;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 5px;
+
+}
+
 @media (min-width: 601px) {
     .philoshophy{
         min-height: 539px;
