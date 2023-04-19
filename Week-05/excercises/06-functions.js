@@ -27,7 +27,7 @@ console.log('The result of ' + x + ' + ' + y + ' is equal to ' + resultado)
 //c.Crear una función “validateInteger” que reciba un número como parámetro y devuelva verdadero si es un número entero.
 console.log('Excercise 6c.:');
 function validateInteger(a){
-  if (Math.round(numeroIncognita) === numeroIncognita){
+  if (Math.round(a) === a){
       return true;
   } else {
       return false;
