@@ -1,235 +1,227 @@
 aside{
-    display: none;
-    justify-content: center;
-    width: 100%;
-    min-height: 323px;
-    background: #373867;
-    opacity: 0.6;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  min-height: 323px;
+  background: #373867;
+  opacity: 0.6;
 }
 .id-contact{
     display: none;
 }
 .navegation li{
   font-size: 10px;
-    margin-top: 20px;
-    text-align: center;
-    text-transform: uppercase;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .navegation h3{
-    font-size: 10px;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
 }
-
 .philoshophy{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 245px;
-    min-width: 260px;
-    background-image: url(../../Assets/Images/blue-gym-banner.png);
-    background-position: center;
-    background-size: cover;
-    color: white;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 245px;
+  min-width: 260px;
+  background-image: url("../../Assets/Images/blue-gym-banner.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
 }
 .philoshophy h2{
-    font-size: 19px;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .philoshophy p{
-    font-size: 10px;
-    font-weight: 400;
-    margin: 20px;
-    margin-right: 90px;
-    margin-left: 90px;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 20px;
+  margin-right: 90px;
+  margin-left: 90px;
 }
 .why{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 .women-excercising{
-    display: none;
+  display: none;
 }
-.why-text img{
-    display:none;
+.why-title img{
+  display:none;
 }
-.why-text{
-    color: #373867;
-    text-align: center;
-    align-items: center;
-    margin-top: 35px;
-    font-weight: 700;
-    padding: 0% 7%;
+.why-title{
+  color: #373867;
+  text-align: center;
+  align-items: center;
+  margin-top: 35px;
+  font-weight: 700;
+  padding: 0% 7%;
 }
-.why-text h4{
-    text-transform: uppercase;
+.why-title h4{
+  text-transform: uppercase;
 }
-.why-text p{
-    margin-top: 10px;
-    margin-bottom: 20px;
+.why-title p{
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .section-title{
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    justify-content: center;
-    min-height: 53px;
-    width: 82%;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: #373867;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  min-height: 53px;
+  width: 82%;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #373867;
 }
 .all-activities {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 5%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5%;
 }
 .activities-group {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 5%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 5%;
 }
-.activities-group div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width:70%;
-    height: 270px;
-    margin-bottom: 20px;
+.activities-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width:70%;
+  height: 270px;
+  margin-bottom: 20px;
 }
 .all-activities h3 {
-    color: #FFFFFF;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
 }
-
 .all-activities p {
-    width: 100%;
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 20px;
-    line-height:20px;
-    text-align: center  ;
+  width: 100%;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 20px;
+  line-height:20px;
+  text-align: center;
 }
 .crossfit {
-    background-image: url("../../Assets/Images/crossfit.png");
-    background-position: center top;
-    background-size: cover;
+  background-image: url("../../Assets/Images/crossfit.png");
+  background-position: center top;
+  background-size: cover;
 }
-
 .spinning {
-    background-image: url("../../Assets/Images/spinning.png");
-    background-position: center top;
-    background-size: cover;
+  background-image: url("../../Assets/Images/spinning.png");
+  background-position: center top;
+  background-size: cover;
 }
-
 .functional {
-    background-image: url("../../Assets/Images/funcional.png");
-    background-position: center top;
-    background-size: cover;
+  background-image: url("../../Assets/Images/funcional.png");
+  background-position: center top;
+  background-size: cover;
 }
-
 .boxing {
-    background-image: url("../../Assets/Images/boxi.png");
-    background-position: center top;
-    background-size: cover;
+  background-image: url("../../Assets/Images/boxi.png");
+  background-position: center top;
+  background-size: cover;
 }
-
 .weight {
-    background-image: url("../../Assets/Images/musculacion.png");
-    background-position: center top;
-    background-size: cover;
+  background-image: url("../../Assets/Images/musculacion.png");
+  background-position: center top;
+  background-size: cover;
 }
 .memberships {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .memberships-all{
-    margin-top: 10%;
+  margin-top: 10%;
 }
 .membership-each-one{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
 }
 .only-classes{
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 80%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
 }
 .rect-gris{
-    background-color:#979797;
-    height: 45px;
-    width: 80%;
-    margin-top: -55px;
+  background-color:#979797;
+  height: 45px;
+  width: 80%;
+  margin-top: -55px;
 
 }
-
 .only-classes h2 {
-    margin: 10% 0;
-    align-self: flex-start;
-    color: #373867;
-    font-size: 30.5px;
-    font-weight: 700;
+  margin: 10% 0;
+  color: #373867;
+  font-size: 30.5px;
+  font-weight: 700;
 }
 .only-classes span {
-    color: #AACE9B;
+  color: #AACE9B;
 }
 .only-classes p,li{
-    color: #373867;
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 5%;
-    text-align: left;
+  color: #373867;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 5%;
+  text-align: left;
 }
 .text-membership{
-    display: flex;
-    justify-content: center;
-    width: 80%;
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
 .only-classes ul{
-    align-self: flex-start;
-    border-bottom: 1px solid #AFAFC2;
-    padding-bottom: 5%;
-    width: 100%;
+  align-self: flex-start;
+  border-bottom: 1px solid #AFAFC2;
+  padding-bottom: 5%;
+  width: 100%;
 }
 .list-membership li::before{
-    content: "\2713";
-    padding-right: 5px;
+  content: "\2713";
+  padding-right: 5px;
 }
 .memberships img {
-    width: 100%;
-    height:100%;
+  width: 100%;
+  height: 300px;
 }
 .button{
-    width: 100%;
-    background-color: #49A37B;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 72px;
-    margin-top: 5% ;
+  width: 100%;
+  background-color: #49A37B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  margin-top: 5% ;
 }
-
 .button a{
   font-size: 40px;
   font-weight: 700;
@@ -386,199 +378,297 @@ form label{
   font-size: 13px;
   font-weight: bold;
   margin-top: 5px;
-
 }
-
-@media (min-width: 601px) {
-    .philoshophy{
-        min-height: 539px;
-        width: 100%;
-    }
-    .philoshophy h2{
-        font-size: 40px;
-    }
-    .philoshophy p{
-        font-size: 20px;
-        margin-right: 120px;
-        margin-left: 120px;
-    }
-    .navegation li{
-      font-size: 20px;
-    }
-    .navegation h3{
-        font-size: 20px;
-    }
-    .why{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-    .women-excercising{
-      display: block;
-      width: 276px;
-      height: 244px;
-      margin-right: 5%;
-    }
-    .why-text h4{
-      font-size: 35px;
-    }
-    .why-text p{
-      font-size: 25px;
-      margin-top: 5%;
-      text-align: left;
-    }
-    .activities-group div {
-      width:30%;
-      margin: 0;
+@media screen and (min-width: 601px) {
+  .philoshophy{
+    min-height: 539px;
+    width: 100%;
   }
-    .activities-group{
-      flex-direction: row;
-      margin: 5% 0 0 5%;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-    .section-title{
-      min-height: 7em;
-      max-width: 37em;
-    }
-    .section-title h2{
-      font-size: 40px;
-    }
-    .mr-membership-title{
-      margin-top:5%;
-    }
-    .memberships-all{
-      width: 70%;
-    }
-    .rect-gris{
-      min-height: 61px;
-      margin-top: -12%;
-    }
-    .membership-each-one h2{
-      font-size: 40px;
-    }
-    .membership-each-one li{
-      font-size: 1em;
-    }
-    .banner > div{
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      height: 100%;
-    }
-    .banner-images{
-      width: 273px;
-      height: 280px;
-    }
-    .banner-content{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      width: 40%;
-      margin-bottom: 10%;
-    }
-    .banner-content h2{
-      font-size: 80px;
-    }
-    .banner-content h3{
-      font-size: 2em;
-    }
-    .banner-content p{
-      font-size: 2em;
-    }
-    .membership-banner{
-      display: none;
-    }
-    .schedule-banner{
-      display: none;
+  .philoshophy h2{
+    font-size: 40px;
+  }
+  .philoshophy p{
+    font-size: 20px;
+    margin-right: 120px;
+    margin-left: 120px;
+  }
+  .navegation li{
+    font-size: 20px;
+  }
+  .navegation h3{
+    font-size: 20px;
+  }
+  .why{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .women-excercising{
+    display: block;
+    width: 276px;
+    height: 244px;
+    margin-right: 5%;
+  }
+  .why-title h4{
+    font-size: 35px;
+  }
+  .why-text p{
+    font-size: 25px;
+    margin-top: 5%;
+    text-align: left;
+    color: #373867;
+    font-weight: bold;
+  }
+  .activities-images {
+    width:270px;
+    margin: 0;
+  }
+  .activities-group{
+    flex-direction: row;
+    margin: 5% 0 0 5%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .section-title{
+    min-height: 7em;
+    max-width: 37em;
+  }
+  .section-title h2{
+    font-size: 40px;
+  }
+  .mr-membership-title{
+    margin-top:5%;
+  }
+  .memberships-all{
+    width: 70%;
+  }
+  .rect-gris{
+    min-height: 61px;
+    margin-top: -12%;
+  }
+  .membership-each-one h2{
+    font-size: 40px;
+  }
+  .membership-each-one li{
+    font-size: 1em;
+  }
+  .banner > div{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  .banner-images{
+    width: 273px;
+    height: 280px;
+  }
+  .banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+    margin-bottom: 10%;
+  }
+  .banner-content h2{
+    font-size: 80px;
+  }
+  .banner-content h3{
+    font-size: 2em;
+  }
+  .banner-content p{
+    font-size: 2em;
+  }
+  .membership-banner{
+    display: none;
+  }
+  .schedule-banner{
+    display: none;
 
-    }
-    .contact-banner{
-      display: none;
-   }
-   .form{
+  }
+  .contact-banner{
+    display: none;
+  }
+  .form{
     width: 665px;
     height: 694px;
     justify-content: flex-start;
-   }
-   .form-title{
+  }
+  .form-title{
     font-weight: bold;
     font-size: 32px;
     margin-top: 7%;
-   }
-   form{
+  }
+  form{
     width: 90%;
-   }
-   form label{
+  }
+  form label{
     font-size: 1em;
-   }
-   .suggest-checkbox{
+  }
+  .suggest-checkbox{
     align-self:first baseline;
-   }
-   .suggest-opinion{
+  }
+  .suggest-opinion{
     display: flex;
     flex-direction: row;
     align-content: space-between;
-   }
-   .suggest-checkbox{
+  }
+  .suggest-checkbox{
     margin-left: 30px;
-   }
-   .radio-input{
+  }
+  .radio-input{
     padding: 1%;
-   }
+  }
+  .container-why{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+  }
+  .why-title{
+    padding: 0;
+  }
 }
-@media (min-width: 1025px) {
-    main{
-        display: flex;
-        flex-direction: row;
-    }
-    aside {
-        background-color: #373867;
-        width: 20%;
-        height: 5300px;
-        color: white;
-        padding-top: 50px;
-    }
-      .id-contact{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-        margin-top: 7px;
-        line-height: 1.5;
-        align-self: center;
-        text-align: center;
-    }
-    .philoshophy{
-        width:100%;
-    }
-    .navegation a{
-        color: white;
-        font-size: 27px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-    }
-    .id-contact a{
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-        text-transform: lowercase;
-        line-height: 1.5;
-        font-weight: normal;
-    }
-    .navegation li{
-        margin-top: 50px    ;
-    }
-    .navegation{
-        position: sticky;
-        top: 271px;
-        color: white;
-    }
+@media screen and (min-width: 1025px) {
+  main{
+      display: flex;
+      flex-direction: row;
+  }
+  aside {
+    display: flex;
+    background-color: #373867;
+    opacity: 1;
+    width: 30%;
+    height: 5500px;
+    color: white;
+    padding-top: 50px;
+  }
+    .id-contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 7px;
+    line-height: 1.5;
+    align-self: center;
+    text-align: center;
+  }
+  .philoshophy{
+    width:100%;
+    min-height: 624px;
+  }
+  .philoshophy h2{
+    font-size: 60px;
+  }
+  .navegation a{
+    color: white;
+    font-size: 27px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+  .id-contact a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: lowercase;
+    line-height: 1.5;
+    font-weight: normal;
+  }
+  .navegation li{
+    margin-top: 50px    ;
+  }
+  .navegation{
+    position: sticky;
+    top: 100px;
+    color: white;
+    height: 450px;
+  }
+  .activities-images{
+    width: 461px;
+    height: 471px;
+  }
+  .activities-group{
+    width: 80%;
+    align-self: center;
+    align-items: center;
+  }
+  .philoshophy p{
+    font-size: 20px;
+    text-align: center;
+    max-width: 590px;
+    margin-left: 5% 25%;
+  }
+
+  .why-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .why-title img{
+    display: block;
+    margin-left: 5px;
+  }
+  .why-title h4{
+    font-size: 40px;
+    margin-left: 0;
+  }
+  .women-excercising{
+    width: 40%;
+    height: 40%;
+    margin-right: 0;
+  }
+  .container-why{
+    max-width: 690px;
+  }
+.why-title img{
+  width: 44px;
+  height: 50px;
+}
+  .why-text p{
+    font-size: 40px;
+  }
+  .all-activities h3{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .all-activities p{
+    font-size: 40px;
+    line-height: 43px;
+    font-weight: bold;
+  }
+  .membership-each-one{
+    width: 30%;
+  }
+  .memberships-all{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+  }
+  .only-classes p{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .only-classes li{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .only-classes{
+    min-width: 280px;
+  }
+  .rect-gris{
+    min-width: 280px;
+  }
+  .membership-each-one li {
+    font-size: 15px;
+    font-weight: bold;
+  }
 }
 
 
