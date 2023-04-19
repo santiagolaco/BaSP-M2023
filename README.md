@@ -26,15 +26,21 @@ Modifications were made to the HTML based on comments and suggestions from teach
 ## :date: Week 4
 
 -Make a restructuring of the HTML for better use of Flexbox
+
 -Learn about Flexbox CSS attribute
+
 -New css folder structure
+
 -CSS media added for responsive design
+
 -We learned to work with the GitHub Pages. See the landing page in the [link](https://santiagolaco.github.io/BaSP-M2023/Week-04)
 
 ## :date: Week 5
 
 -We learned JavaScript syntax and troubleshooting tools.
+
 -We learned to use basic JavaScript structures, such as strings, arrays, if-else, for loop and functions
+
 -Ling to problems [here](https://santiagolaco.github.io/BaSP-M2023/Week-05)
 
 
