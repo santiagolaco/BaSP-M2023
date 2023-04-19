@@ -16,4 +16,4 @@ console.log('Excercise 1c.');
 var string1 = 'Santiago';
 var string2 = 'Laco';
 var cantLetras = string1.length + string2.length;
-console.log(cantLetras);s
+console.log(cantLetras);
