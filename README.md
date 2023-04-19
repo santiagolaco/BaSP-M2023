@@ -41,7 +41,7 @@ Modifications were made to the HTML based on comments and suggestions from teach
 
 -We learned to use basic JavaScript structures, such as strings, arrays, if-else, for loop and functions
 
--Ling to problems [here](https://santiagolaco.github.io/BaSP-M2023/Week-05)
+-Link to problems [here](https://santiagolaco.github.io/BaSP-M2023/Week-05)
 
 
 ## Authors
