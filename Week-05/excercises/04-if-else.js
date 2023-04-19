@@ -1,5 +1,5 @@
 console.log('04-if-else');
-//a.Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que 
+//a.Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que
 //0,5 mostrar una console.loga con el mensaje “Greater than or equal to 0,5” y sino un console.loga con el mensaje “Lower than 0,5”.
 console.log('Excercise 4a.:');
 var numberRandom = Math.random();

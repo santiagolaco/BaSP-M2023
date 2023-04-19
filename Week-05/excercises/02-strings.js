@@ -1,5 +1,6 @@
 console.log('02-strings');
-//a.Crear una variable de tipo string con al menos 10 caracteres y convertir todo el texto en mayúscula (utilizar toUpperCase).
+//a.Crear una variable de tipo string con al menos 10 caracteres y convertir todo el texto en mayúscula
+// (utilizar toUpperCase).
 console.log('Excercise 2a.');
 var a = 'Hola, este es un string de prueba.';
 var stringMayuscula = a.toUpperCase();
@@ -25,14 +26,14 @@ var firstLetter = a.substring(0,1);
 var restoEnunciado = a.substring(1);
 var resultado = firstLetter.toUpperCase() + restoEnunciado.toLowerCase();
 console.log(resultado);
-//e.Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. Encontrar la posición del 
+//e.Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. Encontrar la posición del
 //primer espacio en blanco y guardarla en una variable (utilizar indexOf)
 console.log('Excercise 2e.');
 var a = 'hola, este es un string de prueba.';
 var firstSpace = a.indexOf(' ');
 console.log(firstSpace);
 //f.Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y algún espacio entre medio). Utilizar
-//los métodos de los Excercises anteriores para generar un nuevo string que tenga la primera letra de ambas palabras en 
+//los métodos de los Excercises anteriores para generar un nuevo string que tenga la primera letra de ambas palabras en
 //mayúscula y las demás letras en minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
 console.log('Excercise 2f.');
 var a = 'santiago laco';
