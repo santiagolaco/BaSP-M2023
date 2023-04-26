@@ -45,7 +45,7 @@ Modifications were made to the HTML based on comments and suggestions from teach
 
 ## :date: Week 6
 
-- This week we had to make the login page and the registration page, then we had to validate several fields in each of them usin JavaScript to finally display an alert if completed or not satisfactorily.
+This week we had to make the login page and the registration page, then we had to validate several fields in each of them usin JavaScript to finally display an alert if completed or not satisfactorily.
 
 [Week 06 Validations JS - GitHub Pages](https://santiagolaco.github.io/BaSP-M2023/Week-06/views/index.html)
 
