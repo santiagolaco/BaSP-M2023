@@ -1,0 +1,185 @@
+main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+
+aside {
+  display: none;
+  width: 20%;
+  padding-top: 50px;
+  background-color: #373867;
+  color: white;
+}
+
+.green-box{
+  width: 100%;
+  height: 160px;
+  min-width: 150px;
+  background-color: #373867;
+  display: flex;
+  justify-content:space-between;
+}
+
+.header-logo img{
+  height: 80%;
+  margin: 10% 0 10% 10%;
+}
+
+.buttons-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin-right: 10%;
+}
+
+ul {
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navegation {
+  position: sticky;
+  top: 190px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+form {
+  background-color: whitesmoke;
+  color: #373867;
+  margin-top: 15%;
+  width: 80%;
+  box-shadow: 4px 4px 4px #00000040, 4px 4px 12px #00000040;
+  max-width: 650px;
+}
+
+.login-button {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.login-button button{
+  border-radius: 5px;
+  padding: 10px 40px 10px 40px;
+  color: #373867;
+  font-weight: bold;
+  background-color: white;
+}
+
+.title-login {
+  background-color: #373867;
+  color: #373867;
+  padding: 25px 0px 25px 0px;
+}
+
+.title-login h2 {
+  color: white;
+  font-size: 25px;
+}
+
+.forgot a {
+  color: #373867;
+  font-size: small;
+}
+
+.login-input {
+  padding: 10px;
+}
+
+.input-login {
+  padding: 10px;
+}
+
+.remember {
+  padding-bottom: 10px;
+}
+
+.border-red{
+  border-color: red;
+  opacity: 0.6;
+}
+.validation-message{
+  color: red;
+}
+@media  screen and (min-width: 1024px){
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: #373867;
+    color: white;
+    height: 100%;
+  }
+
+  nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo-side-bar{
+    width: 80%;
+    margin: 5%;
+  }
+
+  .side-bar-list{
+    margin-top: 50%;
+  }
+
+  ul {
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 30px;
+  }
+
+  form {
+   width: 80vw;
+   min-width: 350px;
+   max-width: 650px;
+  }
+
+  .green-box{
+    width: 100%;
+    height: 160px;
+    background-color: #49A37B;
+  }
+
+  .header-logo{
+    display: none;
+  }
+
+  .buttons-mobile{
+    display: none;
+  }
+
+}
