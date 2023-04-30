@@ -21,7 +21,7 @@ passwordInput.addEventListener("blur", function() {
     passwordInput.classList.add('border-red')
   } else {
     passwordInput.nextElementSibling.textContent = "";
-    passwordInput.classList.add('border-red')
+    passwordInput.classList.remove('border-red')
   }
 });
 
@@ -79,6 +79,21 @@ loginButton.addEventListener("click", function(event) {
   if (error !== "") {
     alert(error);
   } else {
-    alert("Email: " + email + "\nPassword: " + password);
+
+    fetch(`https://api-rest-server.vercel.app/login?email=${email}&password=${password}`)
+      .then(function (resp) {
+        if(!resp.ok){
+          throw new Error()
+        }
+        return resp.json();
+      })
+      .then(function (data) {
+        alert("The request was successful:\n" + JSON.stringify(data));
+        alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value);
+      })
+      .catch(function (fail) {
+        alert("The request could not be made correctly:\n" + fail);
+      });
+
   }
 });
