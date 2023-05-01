@@ -69,27 +69,23 @@ loginButton.addEventListener("click", function(event) {
   event.preventDefault();
   var email = emailInput.value;
   var password = passwordInput.value;
-  let error = "";
+  var alertMessage= [ ];
   if (!validateEmail(email)) {
-    error += "Please enter a valid email address.\n";
+    alertMessage += "Please enter a valid email address.\n";
   }
   if (!validatePassword(password)) {
-    error += "Please enter a valid password.\n";
+    alertMessage += "Please enter a valid password.\n";
   }
-  if (error !== "") {
-    alert(error);
-  } else {
-
-    fetch(`https://api-rest-server.vercel.app/login?email=${email}&password=${password}`)
+  if (alertMessage == "") {
+    fetch('https://api-rest-server.vercel.app/login?email=${email}&password=${password}')
       .then(function (resp) {
         if(!resp.ok){
           throw new Error()
         }
         return resp.json();
       })
-      .then(function (data) {
-        alert("The request was successful:\n" + JSON.stringify(data));
-        alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value);
+      .then(function (resp) {
+        alert("The request was successful:\n" + JSON.stringify(resp) + "\nEmail: " + emailInput.value + "\nPassword3: " + passwordInput.value);
       })
       .catch(function (fail) {
         alert("The request could not be made correctly:\n" + fail);

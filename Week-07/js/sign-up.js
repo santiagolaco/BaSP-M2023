@@ -1,15 +1,31 @@
-var firstName = document.querySelector(".input-name");
-var lastName = document.querySelector(".input-lastName");
-var id = document.querySelector(".input-id");
-var date = document.querySelector(".input-date");
-var phone = document.querySelector(".input-phone");
-var address = document.querySelector(".input-address");
-var city = document.querySelector(".input-city");
-var code = document.querySelector(".input-code");
-var email = document.querySelector(".input-email");
-var password = document.querySelector(".input-password");
-var confirmPassword = document.querySelector(".input-confirm");
-var registerButton = document.querySelector(".member-button");
+var firstName = localStorage.getItem('firstName');
+var lastName = localStorage.getItem('lastname');
+var id = localStorage.getItem('id');
+var date = localStorage.getItem('date');
+var phone = localStorage.getItem('phone');
+var address = localStorage.getItem('address');
+var city = localStorage.getItem('city');
+var code = localStorage.getItem('code');
+var email = localStorage.getItem('email');
+var password = localStorage.getItem('password');
+var confirmPassword = localStorage.getItem('confirmPassword');
+
+
+
+firstName = document.querySelector(".input-name");
+lastName = document.querySelector(".input-lastName");
+id = document.querySelector(".input-id");
+date = document.querySelector(".input-date");
+phone = document.querySelector(".input-phone");
+address = document.querySelector(".input-address");
+city = document.querySelector(".input-city");
+code = document.querySelector(".input-code");
+email = document.querySelector(".input-email");
+password = document.querySelector(".input-password");
+confirmPassword = document.querySelector(".input-confirm");
+registerButton = document.querySelector(".member-button");
+
+
 
 function isLetter(cadena) {
   for (var i = 0; i < cadena.length; i++) {
@@ -56,16 +72,17 @@ function hasCaps(cadena) {
   return false;
 }
 var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+var flag=0;
 
 firstName.addEventListener("blur", function() {
     if (firstName.value.length =="") {
       firstName.nextElementSibling.textContent = "Field Required";
       firstName.classList.add('border-red');
     } else if(!isLetter(firstName.value)) {
-      firstName.nextElementSibling.textContent = "firstName field must only contain letters";
+      firstName.nextElementSibling.textContent = "Firstname field must only contain letters";
       firstName.classList.add('border-red');
     } else if (firstName.value.length<4) {
-      firstName.nextElementSibling.textContent = "firstName must be more than 3 characters";
+      firstName.nextElementSibling.textContent = "Firstname must be more than 3 characters";
       firstName.classList.add('border-red');
     }else {
       firstName.nextElementSibling.textContent = "";
@@ -78,10 +95,10 @@ lastName.addEventListener("blur", function() {
     lastName.nextElementSibling.textContent = "Field Required";
     lastName.classList.add('border-red');
   } else if(!isLetter(lastName.value)) {
-    lastName.nextElementSibling.textContent = "lastName field must only contain letters";
+    lastName.nextElementSibling.textContent = "Lastname must only contain letters";
     lastName.classList.add('border-red');
   } else if (lastName.value.length<4) {
-    lastName.nextElementSibling.textContent = "lastName must be more than 3 characters";
+    lastName.nextElementSibling.textContent = "Lastname must be more than 3 characters";
     lastName.classList.add('border-red');
   }else {
     lastName.nextElementSibling.textContent = "";
@@ -125,7 +142,7 @@ email.addEventListener("blur", function() {
     email.nextElementSibling.textContent = "Field Required";
     email.classList.add('border-red');
   } else if (!emailRegex.test(email.value)) {
-    email.nextElementSibling.textContent = "Please enter a valid email.";
+    email.nextElementSibling.textContent = "Email format incorrect.";
     email.classList.add('border-red');
   } else {
     email.nextElementSibling.textContent = "";
@@ -138,10 +155,10 @@ city.addEventListener("blur", function() {
     city.nextElementSibling.textContent = "Field Required";
     city.classList.add('border-red');
   } else if(!letterAndNumber(city.value)) {
-    city.nextElementSibling.textContent = "Localidad field must only contain numbers and letters";
+    city.nextElementSibling.textContent = "City field must only contain numbers and letters";
     city.classList.add('border-red');
   } else if (city.value.length<=3) {
-    city.nextElementSibling.textContent = "Localidad must be more than 3 characters";
+    city.nextElementSibling.textContent = "City must be more than 3 characters";
     city.classList.add('border-red');
   }else {
     city.nextElementSibling.textContent = "";
@@ -155,10 +172,10 @@ code.addEventListener("blur", function() {
     code.classList.add('border-red');
     var codeError="Field Required";
   } else if(!isNumber(code.value)) {
-    code.nextElementSibling.textContent = "CP field must only contain numbers";
+    code.nextElementSibling.textContent = "Zip code must only contain numbers";
     code.classList.add('border-red');
   } else if (code.value.length<4 || code.value.length>5) {
-    code.nextElementSibling.textContent = "CP must have 4 or 5 characters";
+    code.nextElementSibling.textContent = "Zip code must have 4 or 5 characters";
     code.classList.add('border-red');
   }else {
     code.nextElementSibling.textContent = "";
@@ -171,7 +188,7 @@ password.addEventListener("blur", function() {
     password.nextElementSibling.textContent = "Field Required";
     password.classList.add('border-red');
   } else if(!letterAndNumber(password.value)) {
-    password.nextElementSibling.textContent = "Password field must only contain numbers and letters";
+    password.nextElementSibling.textContent = "Password must only contain numbers and letters";
     password.classList.add('border-red');
   } else if (!hasCaps(password.value)) {
     password.nextElementSibling.textContent = "Password must contain at least one Uppercase Letter";
@@ -190,7 +207,7 @@ confirmPassword.addEventListener("blur", function() {
     confirmPassword.nextElementSibling.textContent = "Field Required";
     confirmPassword.classList.add('border-red');
   }else if(confirmPassword.value !== password.value) {
-    confirmPassword.nextElementSibling.textContent = "Passwords do not match";
+    confirmPassword.nextElementSibling.textContent = "Passwords does not match";
     confirmPassword.classList.add('border-red');
   }else {
     confirmPassword.nextElementSibling.textContent = "";
@@ -258,7 +275,7 @@ date.addEventListener("blur", function() {
     date.nextElementSibling.textContent = "Field Required";
     date.classList.add('border-red');
   }  else if (!dateCheck(date)) {
-    date.nextElementSibling.textContent = "Please enter a valid email.";
+    date.nextElementSibling.textContent = "Please enter a valid date.";
     date.classList.add('border-red');
   } else {
     date.nextElementSibling.textContent = "";
@@ -271,6 +288,13 @@ function GetValueToShow(element) {
       return element.value;
     else
       return element.nextElementSibling.textContent;
+}
+
+function flagFunction(element) {
+  if(element.nextElementSibling.textContent === "")
+    return 1;
+  else
+    return 0;
 }
 
 address.addEventListener("blur", function() {
@@ -298,57 +322,115 @@ function IsValidAddress(value) {
 registerButton.addEventListener("click", function(event) {
 event.preventDefault();
 var alertMessage = '';
+var flag = 0;
 alertMessage = 'Form information:\n';
 if (firstName.value == ""){
   alertMessage += 'firstName: ' +  "Field Required";
 } else {
   alertMessage += 'firstName: ' +  GetValueToShow(firstName);
+  flag = flag + flagFunction(firstName);
 }
 if (lastName.value == ""){
   alertMessage += '\nLast firstName: ' + "Field Required";
 } else {
   alertMessage += '\nLast firstName: ' + GetValueToShow(lastName);
+  flag = flag + flagFunction(lastName);
 }
 if (id.value == ""){
   alertMessage += '\nLast ID Number: ' + "Field Required";
 } else {
   alertMessage += '\nLast ID Number: ' + GetValueToShow(id);
+  flag = flag + flagFunction(id);
 }
 if (date.value == ""){
   alertMessage += '\nBirthdate: ' + "Field Required";
 } else {
   alertMessage += '\nBirthdate: ' + GetValueToShow(date);
+  flag = flag + flagFunction(date);
 }
 if (phone.value == ""){
   alertMessage += '\nPhone Number: ' + "Field Required";
 } else {
   alertMessage += '\nPhone Number: ' + GetValueToShow(phone);
+  flag = flag + flagFunction(phone);
 }
 if (address.value == ""){
   alertMessage += '\nAddress: ' + "Field Required";
 } else {
   alertMessage += '\nAddress: ' + GetValueToShow(address);
+  flag = flag + flagFunction(address);
 }
 if (city.value == ""){
   alertMessage += '\nLocality: ' + "Field Required";
 } else {
   alertMessage += '\nLocality: ' + GetValueToShow(city);
+  flag = flag + flagFunction(city);
 }
 if (code.value == ""){
   alertMessage += '\nPostal Code: ' + "Field Required";
 } else {
   alertMessage += '\nPostal Code: ' + GetValueToShow(code);
+  flag = flag + flagFunction(code);
 }
 if (password.value == ""){
   alertMessage += '\nPassword: ' + "Field Required";
 } else {
   alertMessage += '\nPassword: ' + GetValueToShow(password);
+  flag = flag + flagFunction(password);
 }
 if (confirmPassword.value == ""){
   alertMessage += '\nConfirm Password: ' + "Field Required";
 } else {
   alertMessage += '\nConfirm Password: ' + GetValueToShow(confirmPassword);
+  flag = flag + flagFunction(confirmPassword);
 }
-  alert(alertMessage);
+if (email.value == ""){
+  alertMessage += '\nEmail: ' + "Field Required";
+} else {
+  alertMessage += '\nEmail: ' + GetValueToShow(email);
+  flag = flag + flagFunction(email);
+}
 
+
+function formatDate(date) {
+  var dateArray = date.split("-");
+  var finalDate = dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
+  return finalDate;
+};
+
+if (flag==11){
+  var formattedDate  = formatDate(date.value);
+  alert(formattedDate)
+
+  var url =`https://api-rest-server.vercel.app/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${id.value}&dob=${formattedDate}&phone=${phone.value}&address=${address.value}&city=${city.value}&zip=${code.value}&email=${email.value}&password=${password.value}`;
+
+  fetch(url)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function(resp) {
+    if (!resp.success){
+      throw new Error(JSON.stringify(res))
+    }
+    alert(alertMessage);
+    alert("The request was successful:\n" + JSON.stringify(resp))
+    localStorage.setItem('firstName', firstName.value)
+    localStorage.getItem('lastName', lastName.value)
+    localStorage.getItem('id', id.value)
+    localStorage.getItem('phone', phone.value)
+    localStorage.getItem('date', date.value)
+    localStorage.getItem('city', city.value)
+    localStorage.getItem('code', code.value)
+    localStorage.getItem('email', email.value)
+    localStorage.getItem('address', address.value)
+    localStorage.getItem('password', password.value)
+    localStorage.getItem('confirmPassword', confirmPassword.value)
+  })
+  .catch(function (fail) {
+    alert("The request could not be made correctly:\n" + fail);
+  });
+
+}else{
+  alert(alertMessage);
+}
 });
