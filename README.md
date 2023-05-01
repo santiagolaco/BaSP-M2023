@@ -53,7 +53,9 @@ This week we had to make the login page and the registration page, then we had t
 This week we continue working with the forms of the sign in and log in pages. Once the input parameters have been validated (performed in week 06), we take these values ​​and send them to a web server using the Javascript Fetch method.
 
 We then create an alert based on the response provided by the server.
+
 [Week 07 Web server - GitHub Pages](https://santiagolaco.github.io/BaSP-M2023/Week-07/views/index.html)
+
 ## Authors
 
 - [Santiago Laco](https://www.github.com/santiagolaco)
