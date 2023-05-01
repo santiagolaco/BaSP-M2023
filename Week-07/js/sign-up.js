@@ -1,31 +1,29 @@
-var firstName = localStorage.getItem('firstName');
-var lastName = localStorage.getItem('lastname');
-var id = localStorage.getItem('id');
-var date = localStorage.getItem('date');
-var phone = localStorage.getItem('phone');
-var address = localStorage.getItem('address');
-var city = localStorage.getItem('city');
-var code = localStorage.getItem('code');
-var email = localStorage.getItem('email');
-var password = localStorage.getItem('password');
-var confirmPassword = localStorage.getItem('confirmPassword');
+var firstName = document.querySelector(".input-name");
+var lastName = document.querySelector(".input-lastName");
+var id = document.querySelector(".input-id");
+var date = document.querySelector(".input-date");
+var phone = document.querySelector(".input-phone");
+var address = document.querySelector(".input-address");
+var city = document.querySelector(".input-city");
+var code = document.querySelector(".input-code");
+var email = document.querySelector(".input-email");
+var password = document.querySelector(".input-password");
+var confirmPassword = document.querySelector(".input-confirm");
+var registerButton = document.querySelector(".member-button");
 
-
-
-firstName = document.querySelector(".input-name");
-lastName = document.querySelector(".input-lastName");
-id = document.querySelector(".input-id");
-date = document.querySelector(".input-date");
-phone = document.querySelector(".input-phone");
-address = document.querySelector(".input-address");
-city = document.querySelector(".input-city");
-code = document.querySelector(".input-code");
-email = document.querySelector(".input-email");
-password = document.querySelector(".input-password");
-confirmPassword = document.querySelector(".input-confirm");
-registerButton = document.querySelector(".member-button");
-
-
+window.onload=function(){
+  firstName.value = localStorage.getItem('firstName');
+  lastName.value = localStorage.getItem('lastName');
+  id.value = localStorage.getItem('id');
+  date.value = localStorage.getItem('date');
+  phone.value = localStorage.getItem('phone');
+  address.value = localStorage.getItem('address');
+  city.value = localStorage.getItem('city');
+  code.value = localStorage.getItem('code');
+  email.value = localStorage.getItem('email');
+  password.value = localStorage.getItem('password');
+  confirmPassword.value = localStorage.getItem('confirmPassword');
+}
 
 function isLetter(cadena) {
   for (var i = 0; i < cadena.length; i++) {
@@ -121,6 +119,7 @@ id.addEventListener("blur", function() {
     id.classList.remove('border-red')
   }
 });
+
 phone.addEventListener("blur", function() {
   if (phone.value.length =="") {
     phone.nextElementSibling.textContent = "Field Required";
@@ -391,7 +390,6 @@ if (email.value == ""){
   flag = flag + flagFunction(email);
 }
 
-
 function formatDate(date) {
   var dateArray = date.split("-");
   var finalDate = dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
@@ -399,8 +397,8 @@ function formatDate(date) {
 };
 
 if (flag==11){
+  var prueba = date.value;
   var formattedDate  = formatDate(date.value);
-  alert(formattedDate)
 
   var url =`https://api-rest-server.vercel.app/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${id.value}&dob=${formattedDate}&phone=${phone.value}&address=${address.value}&city=${city.value}&zip=${code.value}&email=${email.value}&password=${password.value}`;
 
@@ -410,21 +408,21 @@ if (flag==11){
   })
   .then(function(resp) {
     if (!resp.success){
-      throw new Error(JSON.stringify(res))
+      throw new Error(JSON.stringify(resp))
     }
     alert(alertMessage);
     alert("The request was successful:\n" + JSON.stringify(resp))
     localStorage.setItem('firstName', firstName.value)
-    localStorage.getItem('lastName', lastName.value)
-    localStorage.getItem('id', id.value)
-    localStorage.getItem('phone', phone.value)
-    localStorage.getItem('date', date.value)
-    localStorage.getItem('city', city.value)
-    localStorage.getItem('code', code.value)
-    localStorage.getItem('email', email.value)
-    localStorage.getItem('address', address.value)
-    localStorage.getItem('password', password.value)
-    localStorage.getItem('confirmPassword', confirmPassword.value)
+    localStorage.setItem('lastName', lastName.value)
+    localStorage.setItem('id', id.value)
+    localStorage.setItem('phone', phone.value)
+    localStorage.setItem('date', prueba)
+    localStorage.setItem('city', city.value)
+    localStorage.setItem('code', code.value)
+    localStorage.setItem('email', email.value)
+    localStorage.setItem('address', address.value)
+    localStorage.setItem('password', password.value)
+    localStorage.setItem('confirmPassword', confirmPassword.value)
   })
   .catch(function (fail) {
     alert("The request could not be made correctly:\n" + fail);
