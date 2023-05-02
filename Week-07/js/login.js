@@ -2,6 +2,10 @@
 var emailInput = document.querySelector(".input-email");
 var passwordInput = document.querySelector(".input-password");
 var loginButton = document.querySelector(".login-button button");
+var titleModal = document.getElementById("title-modal");
+var textModal = document.getElementById("text-modal");
+var modalWindow = document.getElementById("modal-window");
+var buttonModal = document.getElementById("button-modal");
 
 // Validate the email field on blur event
 emailInput.addEventListener("blur", function() {
@@ -63,7 +67,6 @@ function clearErrorMessage(event) {
   target.nextElementSibling.textContent = "";
 }
 
-
 // Validate form on login button click
 loginButton.addEventListener("click", function(event) {
   event.preventDefault();
@@ -77,19 +80,31 @@ loginButton.addEventListener("click", function(event) {
     alertMessage += "Please enter a valid password.\n";
   }
   if (alertMessage == "") {
-    fetch('https://api-rest-server.vercel.app/login?email=${email}&password=${password}')
+    var url=`https://api-rest-server.vercel.app/login?email=${email}&password=${password}`;
+    fetch(url)
       .then(function (resp) {
-        if(!resp.ok){
-          throw new Error()
-        }
         return resp.json();
       })
       .then(function (resp) {
-        alert("The request was successful:\n" + JSON.stringify(resp) + "\nEmail: " + emailInput.value + "\nPassword3: " + passwordInput.value);
+        if(!resp.success){
+          throw new Error(JSON.stringify(resp))
+        }
+        modalWindow.style.display= "block";
+        titleModal.innerHTML = "The request was successful";
+        textModal.innerHTML = JSON.stringify(resp.msg);
+        textModal.style.color = "#373867";
+        alert("\nEmail: " + emailInput.value + "\nPassword3: " + passwordInput.value);
       })
       .catch(function (fail) {
-        alert("The request could not be made correctly:\n" + fail);
+        modalWindow.style.display= "block";
+        titleModal.innerHTML = "The request was unsuccessful";
+        textModal.innerHTML = fail;
+        textModal.style.color = "red";
       });
 
   }
 });
+
+buttonModal.addEventListener("click",function(){
+  modalWindow.style.display= "none";
+})

@@ -10,6 +10,10 @@ var email = document.querySelector(".input-email");
 var password = document.querySelector(".input-password");
 var confirmPassword = document.querySelector(".input-confirm");
 var registerButton = document.querySelector(".member-button");
+var titleModal = document.getElementById("title-modal");
+var textModal = document.getElementById("text-modal");
+var modalWindow = document.getElementById("modal-window");
+var buttonModal = document.getElementById("button-modal");
 
 window.onload=function(){
   firstName.value = localStorage.getItem('firstName');
@@ -298,14 +302,14 @@ function flagFunction(element) {
 
 address.addEventListener("blur", function() {
     if (address.value.length =="") {
-        address.nextElementSibling.textContent = "Field Required";
-        address.classList.add('border-red');
+      address.nextElementSibling.textContent = "Field Required";
+      address.classList.add('border-red');
     } else if(!IsValidAddress(address.value)) {
-        address.nextElementSibling.textContent = "Format invalid";
-        address.classList.add('border-red')
+      address.nextElementSibling.textContent = "Format invalid";
+      address.classList.add('border-red')
     }else {
-        address.nextElementSibling.textContent = "";
-        address.classList.remove('border-red')
+      address.nextElementSibling.textContent = "";
+      address.classList.remove('border-red')
     }
 });
 
@@ -410,8 +414,11 @@ if (flag==11){
     if (!resp.success){
       throw new Error(JSON.stringify(resp))
     }
+    modalWindow.style.display= "block";
+    titleModal.innerHTML = "The request was successful";
+    textModal.innerHTML = JSON.stringify(resp.msg);
+    textModal.style.color = "#373867";
     alert(alertMessage);
-    alert("The request was successful:\n" + JSON.stringify(resp))
     localStorage.setItem('firstName', firstName.value)
     localStorage.setItem('lastName', lastName.value)
     localStorage.setItem('id', id.value)
@@ -425,10 +432,17 @@ if (flag==11){
     localStorage.setItem('confirmPassword', confirmPassword.value)
   })
   .catch(function (fail) {
-    alert("The request could not be made correctly:\n" + fail);
+    modalWindow.style.display= "block";
+    titleModal.innerHTML = "The request was unsuccessful";
+    textModal.innerHTML = fail;
+    textModal.style.color = "red";
   });
 
 }else{
   alert(alertMessage);
 }
 });
+
+buttonModal.addEventListener("click",function(){
+  modalWindow.style.display= "none";
+})
